@@ -17,4 +17,7 @@ describe('String#title_case') do
   it("deals with non-letter characters") do
       expect(("57 beowulf alternative endings!!").title_case()).to(eq("57 Beowulf Alternative Endings!!"))
   end
+  it("manages all uppercase entries") do
+    expect(("BEOWULF ON THE ROCKS").title_case()).to(eq("Beowulf on the Rocks"))
+  end
 end
