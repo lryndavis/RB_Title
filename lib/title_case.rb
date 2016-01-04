@@ -4,7 +4,9 @@ class String
     new_sentence = []
     old_sentence = self.split()
     old_sentence.each() do |word|
-      if old_sentence.index(word) == 0
+      if word.to_i() != 0
+        new_word = word
+      elsif old_sentence.index(word) == 0
         new_word = word.capitalize!()
       elsif designated_words.include?(word)
         new_word = word
