@@ -20,4 +20,7 @@ describe('String#title_case') do
   it("manages all uppercase entries") do
     expect(("BEOWULF ON THE ROCKS").title_case()).to(eq("Beowulf on the Rocks"))
   end
+  it("manages mixed case entries") do
+    expect(("BeOWUlf aND mE").title_case()).to(eq("Beowulf and Me"))
+  end
 end
