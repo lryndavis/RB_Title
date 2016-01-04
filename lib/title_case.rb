@@ -1,9 +1,18 @@
 class String
   define_method(:title_case) do
-    split_sentence = self.split()
-    split_sentence.each do |word|
-      word.capitalize!()
+    designated_words = ["if", "the", "from", "as", "for", "in", "or", "and", "to"]
+    old_sentence = self.split()
+    new_sentence = []
+    old_sentence.each() do |word|
+      if old_sentence.index(word) == 0
+        new_word = word.capitalize!()
+      elsif designated_words.include?(word)
+        new_word = word
+      else
+        new_word = word.capitalize!()
+      end
+      new_sentence.push(new_word)
     end
-    split_sentence.join(" ")
+    new_sentence.join(" ")
   end
 end
