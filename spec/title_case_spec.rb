@@ -14,4 +14,7 @@ describe('String#title_case') do
   it("capitalizes the first word of the sentence") do
     expect(("from beowulf to the hulk").title_case()).to(eq("From Beowulf to the Hulk"))
   end
+  it("deals with non-letter characters") do
+      expect(("57 beowulf alternative endings!!").title_case()).to(eq("57 Beowulf Alternative Endings!!"))
+  end
 end
